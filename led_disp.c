@@ -12,6 +12,7 @@ int main (void)
 	
 	init_disp();
 
+	close_files();
 	return 0;
 }
 
@@ -131,7 +132,7 @@ int send_4bit_command(int command){
 	} else {
 		clear_bit(db4_pin);
 	}
-	
+
 	set_bit(e_pin);
 	usleep(1000);
 	clear_bit(e_pin);
